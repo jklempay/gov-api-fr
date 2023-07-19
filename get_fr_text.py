@@ -7,10 +7,6 @@ ENDPOINT_URL = 'https://api.govinfo.gov/published/1936-01-01?offsetMark=*&pageSi
 CONTENT_URL = 'https://www.govinfo.gov/content/pkg/'
 API_KEY = os.environ['GOV_API_KEY']
 
-# Create data directory
-if not os.path.isdir('data'):
-  os.mkdir('data')
-
 # Get a list of all issues by looping through all pages of results from API query
 print("Getting list of issues...")
 
@@ -25,6 +21,10 @@ while True:
         url = data['nextPage'] + f'&api_key={API_KEY}'
     else:
         break
+        
+# Create data directory
+if not os.path.isdir('data'):
+  os.mkdir('data')
   
 # Get information about the total number of tasks and completed tasks to track progress
 total_issues = len(issues)
