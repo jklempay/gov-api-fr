@@ -3,5 +3,5 @@
  
  This solution is rough-and-ready but functional. Plans to add exception handling and some degree of parallelization using the asyncio library.
  
-*** **For this script to run you need to obtain a GovInfo API key and set it as an environment variable. Information about the GovInfo API is available [here](https://api.govinfo.gov/docs/).***
+**For this script to run you need to obtain a GovInfo API key and set it as an environment variable. Information about the GovInfo API is available [here](https://api.govinfo.gov/docs/).**
 
